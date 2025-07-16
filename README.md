@@ -16,3 +16,11 @@ This is the official website of **DroNow**, a smart drone solution provider for:
   📁 images/
   📁 videos/
   📁 css/
+
+## 🌍 Preview
+[www.dronow.ai](http://www.dronow.ai) (coming soon)
+
+## 📦 How to Use
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/dronow-website.git
