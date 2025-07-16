@@ -11,3 +11,8 @@ This is the official website of **DroNow**, a smart drone solution provider for:
 - Integrated videos, interactive sections, and optimized images
 
 ## 📁 Project Structure
+📂 index.html
+📂 assets/
+  📁 images/
+  📁 videos/
+  📁 css/
