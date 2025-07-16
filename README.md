@@ -18,7 +18,7 @@ This is the official website of **DroNow**, a smart drone solution provider for:
   📁 css/
 
 ## 🌍 Preview
-[www.dronow.ai](http://www.dronow.ai) (coming soon)
+[www.dronow.ai](http://dronow.ai) (coming soon)
 
 ## 📦 How to Use
 1. Clone the repo:
