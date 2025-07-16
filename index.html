@@ -60,8 +60,6 @@
                    display:flex; justify-content:space-between; align-items:center; padding:0 .75rem; font-size:.9rem; z-index: 40; }
     .utility-bar a { color:#fff; text-decoration:none; margin-left:1.2rem; font-weight:500; }
     .utility-bar a:hover { text-decoration:underline; }
-
-    /* -------- Top bar (main navigation) -------- */
     /* -------- Top bar (main navigation) -------- */
 .top-bar {
   position: fixed;
@@ -98,8 +96,7 @@
     /* ------------------------------------------------------------------------- */
 
     .dropdown > a::after {content: "▾"; margin-left: .3rem; font-size: .7em; line-height: 1; position: relative; top: -1px;}
-    /* NEW underline – now lives on ::before
-   and stays visible while the dropdown is open */
+  
 .top-links a::before{
   content:"";
   position:absolute;
@@ -113,13 +110,10 @@
   transition:transform .3s;
 }
 
-/* show on normal hover */
 .top-links a:hover::before{
   transform:scaleX(1);
 }
 
-/* keep it visible when the Services/Industries
-   dropdown (link OR menu) is active */
 .dropdown:hover > a::before,
 .dropdown:focus-within > a::before{
   transform:scaleX(1);
@@ -225,12 +219,6 @@
       .top-links a { margin-left:1rem; font-size:.95rem; }
       .utility-bar { font-size:.8rem; padding:0 .5rem; }
           
-
-      
-
-
-
-
     }
 
 
@@ -240,7 +228,7 @@
   justify-content: center;
   position: absolute;
   left: 50%;
-  bottom: 32px;    /* Distance from the bottom of the hero section */
+  bottom: 32px;    
   transform: translateX(-50%);
   z-index: 10;
   cursor: pointer;
@@ -257,7 +245,6 @@
   100% { transform: translateX(-50%) translateY(0); }
 }
 
-/* === WhatsApp reveal & grow ============================================= */
 .wa-hover{
   position:relative;
   display:inline-flex;
@@ -267,10 +254,9 @@
 /* icon */
 .wa-icon img{height:20px;display:block}
 
-/* number bubble (initially hidden) */
 .wa-number{
   position:absolute;
-  top:120%;                /* just below the icon */
+  top:120%;                
   left:50%;
   transform:translateX(-50%);
   visibility:hidden;
@@ -283,11 +269,10 @@
   box-shadow:0 2px 12px rgba(0,0,0,.18);
   opacity:0;
   transition:opacity .25s;
-  pointer-events:auto;     /* lets the mouse reach it */
+  pointer-events:auto;     
   z-index:200;
 }
 
-/* show the number if EITHER the icon or the number is hovered */
 .wa-hover:hover .wa-number,
 .wa-number:hover{
   visibility:visible;
@@ -295,10 +280,9 @@
   animation:wa-slide 1.4s cubic-bezier(.47,1.64,.41,.8) forwards;
 }
 
-/* grow & recolour when the mouse is on the number itself */
 .wa-number:hover{
-  animation:none!important;                /* stop the slide */
-  transform:translateX(-50%) scale(1.18);  /* upscale */
+  animation:none!important;                
+  transform:translateX(-50%) scale(1.18); 
   background:#00d1ff;
   color:#111;
 }
@@ -309,14 +293,12 @@
   100% {transform:translateX(-50%); opacity:1;}
 }
 
-/* === e-mail hover-grow + copy icon below ============================== */
 .email-wrapper{
   position:relative;
   display:inline-block;
-  margin-left:0%;             /* small gap after WhatsApp block */
+  margin-left:0%;            
 }
 
-/* link – enlarges on hover */
 .email-link{
   color:#fff;
   text-decoration:none;
@@ -326,14 +308,13 @@
 }
 .email-link:hover{
   transform:scale(1.24);
-  cursor:text;                  /* shows text cursor */
+  cursor:text;                 
 }
 
-/* copy button – hidden until wrapper hover */
 .copy-email{
   position:absolute;
   left:50%;
-  top:calc(100% + 6px);         /* 6 px below the address */
+  top:calc(100% + 6px);         
   transform:translateX(-50%) scale(.8);
   background:none;
   border:none;
@@ -350,19 +331,19 @@
   transform:translateX(-50%) scale(1.5);
   pointer-events:auto;
 }
-/* ── bridge for e-mail ──────────────────────────────── */
+
 .email-wrapper::after{
   content:"";
   position:absolute;
-  top:0;                 /* starts at the top edge of the address */
+  top:0;                
   left:0;
-  width:100%;            /* same width as the address */
-  height:38px;           /* address (≈18) + gap (6) + icon (≈14)  */
-  /* no background → fully invisible, but the mouse can rest on it */
+  width:100%;            
+  height:38px;         
+
 }
 .copy-email.copied{
-  transform:translateX(-50%) scale(1.35);   /* grow */
-  opacity:1;                                /* stay visible */
+  transform:translateX(-50%) scale(1.35); 
+  opacity:1;                              
   transition:transform .15s ease, opacity .15s;
 }
 
@@ -372,7 +353,6 @@
   height:1em;
   display:block;
 }
-
 
   .copy-wa {
   background: none;
@@ -392,15 +372,14 @@
   pointer-events: auto;
 }
 
-/* ── hover bridge: extends the hit-area downward ── */
 .wa-hover::after{
   content:"";
   position:absolute;
-  top:0;               /* starts at the top edge of the icon */
+  top:0;               
   left:0;
-  width:100%;          /* same width as the icon */
-  height:36px;         /* ≈ icon (20) + gap + bubble height */
-  /* invisible but mouse-active */
+  width:100%;        
+  height:36px;       
+
 }
 
 
@@ -416,7 +395,6 @@
 
   </style>
 
-  <!-- ===================== Script (dynamic navbar background) ===================== -->
   <script>
     window.addEventListener("scroll", () => {
       document.querySelector(".top-bar")
@@ -426,7 +404,6 @@
 </head>
 
 <body>
-  <!-- -------- Background video & overlay -------- -->
   <video class="video-bg" autoplay muted loop playsinline>
     <source src="background.mp4" type="video/mp4" />
     Your browser does not support the video tag.
@@ -454,8 +431,7 @@
       
 
       <!-- e-mail -->
-      <!-- e-mail (grows on hover – copy icon slides in below) -->
-<!-- e-mail (grows on hover – copy icon slides in below) -->
+    
 <div class="email-wrapper">
   <a href="mailto:info@dronow.io" class="email-link">info@dronow.io</a>
   <button class="copy-email" aria-label="Copy e-mail">
@@ -487,9 +463,8 @@
           <a href="survey.html"    ><img src="icons/survey.svg"      class="icon" alt="">Survey&nbsp;&amp;&nbsp;Mapping</a>
           <a href="thermal.html"     target="_blank"><img src="icons/thermal.svg"     class="icon" alt="">Thermal&nbsp;Imaging</a>
           <a href="cinematic.html"   target="_blank"><img src="icons/cine.svg"        class="icon" alt="">Cinematic&nbsp;Footage</a>
-        </div> <!-- ☑ fixed missing closing tag -->
+        </div> 
       </div>
-      <!-- ▲ Services dropdown ▲ -->
       <div class="dropdown">
         <a href="#industries">Industries</a>
         <div class="dropdown-menu">
@@ -676,7 +651,6 @@
     </div>
   </section>
 
-  <!-- ====== Footer ====== -->
   <footer>
     <nav>
       <a href="#top">Home</a>
@@ -691,14 +665,12 @@
   </footer>
 
   <script>
-    // Hide nav when ANY nav link is clicked
     document.querySelectorAll('.top-links a').forEach(function(link) {
       link.addEventListener('click', function(e) {
         document.querySelector('.top-bar').classList.add('hide-bar');
       });
     });
   
-    // Show nav when mouse moves to top 40px of screen
     document.addEventListener('mousemove', function(e) {
       if (e.clientY < 40) {
         document.querySelector('.top-bar').classList.remove('hide-bar');
@@ -707,7 +679,6 @@
   </script>
 
   <script>
-    // Scroll-triggered animation for section titles (plays every time you scroll in)
     function isInViewport(el) {
       const rect = el.getBoundingClientRect();
       return (
@@ -731,7 +702,6 @@
   </script>
 
   <script>
-    // Center section when clicking ANY nav or dropdown link, and offset for navbar height
     document.querySelectorAll('.top-links a[href^="#"], .dropdown-menu a[href^="#"]').forEach(function(link) {
       link.addEventListener('click', function(e) {
         var targetId = this.getAttribute('href').slice(1);
@@ -744,12 +714,9 @@
           var utilBar = document.querySelector('.utility-bar');
           var navHeight = (topBar ? topBar.offsetHeight : 0) + (utilBar ? utilBar.offsetHeight : 0);
   
-          // Get section position
           var sectionRect = target.getBoundingClientRect();
           var absoluteY = window.scrollY + sectionRect.top;
   
-          // Center, but push it below the navbar (so the title is visible!)
-          // Formula: section top minus navHeight plus 30px extra padding (change 30 if you want)
           var targetY = absoluteY - navHeight + 30;
   
           window.scrollTo({ top: targetY, behavior: 'smooth' });
@@ -769,7 +736,6 @@
   
       var sectionRect = target.getBoundingClientRect();
       var absoluteY = window.scrollY + sectionRect.top;
-      // Scroll so the top of "services" is just below the nav
       var targetY = absoluteY - navHeight + 1;
   
       window.scrollTo({ top: targetY, behavior: 'smooth' });
@@ -783,11 +749,9 @@
     'logo02.png',
     'logo03.png'
   ];
-  // Controls scroll speed for cycling. Bigger = slower. Adjust as you like!
   const pixelsPerFrame = 200;
 
   window.addEventListener('scroll', () => {
-    // Calculate which frame, repeating as you scroll
     const frameIdx = Math.floor(window.scrollY / pixelsPerFrame) % frames.length;
     navLogo.src = frames[frameIdx];
   });
@@ -798,16 +762,12 @@
     btn.addEventListener('click', e =>{
       e.preventDefault();
   
-      /* ① walk up to the nearest wrapper */
       const wrapper = btn.closest('.email-wrapper');
-      if (!wrapper) return;                       // safety: nothing to copy
+      if (!wrapper) return;                      
   
-      /* ② grab the address text */
       const email = wrapper.querySelector('.email-link').textContent.trim();
-  
-      /* ③ copy + feedback */
-      navigator.clipboard.writeText(email).then(()=>{
-        btn.classList.add('copied');              // add scale-up class
+        navigator.clipboard.writeText(email).then(()=>{
+        btn.classList.add('copied');            
         setTimeout(()=>btn.classList.remove('copied'), 400);
       });
     });
@@ -818,7 +778,6 @@
   <script>
     document.querySelector('.copy-wa').addEventListener('click', function(e){
       e.preventDefault();
-      // Get the raw number (remove &nbsp; for clipboard)
       const number = document.getElementById('wa-number-raw').textContent.replace(/\s+/g, '');
       navigator.clipboard.writeText(number).then(function(){
         e.currentTarget.style.color='#00d1ff';
