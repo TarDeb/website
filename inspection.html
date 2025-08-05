@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Drone PV Inspection Services | DroNow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background: #fff;
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .video-header-bar {
+      position: fixed;
+      top: 18px;
+      left: 28px;
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      z-index: 999;
+      background: none;
+      box-shadow: none;
+      padding: 0;
+    }
+    .logo-video {
+      height: 38px;
+      filter: drop-shadow(0 2px 12px rgba(0,0,0,.15));
+      background: none;
+    }
+    .back-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: #1b1b1b;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: background .2s, box-shadow .2s;
+      box-shadow: 0 2px 10px rgba(0,0,0,.20);
+      margin-right: 0.5rem;
+    }
+    .back-arrow:hover {
+      background: #00d1ff;
+      box-shadow: 0 4px 16px rgba(0,209,255,.22);
+    }
+    .back-arrow svg {
+      display: block;
+    }
+    header {
+      padding: 0.45rem 0 0.18rem 0;
+      text-align: center;
+      color: #fff;
+      background: #000;
+      margin-top: 0;
+      border: none;
+    }
+    header h1 {
+      font-size: 1.22rem;
+      font-weight: 600;
+      margin: 0;
+      letter-spacing: .01em;
+      line-height: 1.12;
+    }
+    header p {
+      margin: 0.18rem 0 0 0;
+      font-size: 1.01rem;
+      color: #c9f1ff;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+    section.pv-section {
+      max-width: 900px;
+      margin: 3rem auto 2rem auto;
+      padding: 0 1rem;
+      background: #111;
+      color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+    }
+    .pv-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin: 2.4rem 0 1.2rem 0;
+      letter-spacing: 0.02em;
+    }
+    .pv-section ul {
+      margin-left: 1.1em;
+      margin-bottom: 1.6em;
+    }
+    .pv-section ul li {
+      margin-bottom: 0.7em;
+      line-height: 1.5;
+      font-size: 1.06em;
+    }
+    .pv-section p {
+      margin-bottom: 1.2em;
+      font-size: 1.1em;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: .75rem 2.5rem;
+      font-size: 1.1rem;
+      border: 0;
+      border-radius: 30px;
+      background: #00d1ff;
+      color: #111;
+      font-weight: 700;
+      cursor: pointer;
+      margin: 1.6rem auto 2.6rem auto;
+      text-decoration: none;
+      transition: background .3s, transform .2s;
+    }
+    .btn-primary:hover {
+      background: #66e3ff;
+      transform: scale(1.05);
+      color: #000;
+    }
+    @media (max-width: 600px) {
+      .video-header-bar {
+        top: 7px;
+        left: 7px;
+        gap: 0.6rem;
+      }
+      .logo-video { height: 24px; }
+      .back-arrow { width: 28px; height: 28px; }
+      section.pv-section { padding: 0.5rem; }
+      .pv-section h2 { font-size: 1.25rem; margin: 1.6rem 0 1rem 0; }
+      header h1 { font-size: 1.02rem; }
+      header { padding: 1.2rem 0 0.12rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed logo & arrow bar -->
+  <div class="video-header-bar">
+    <a href="index.html#top" class="back-arrow" title="Back to Home">
+      <svg width="32" height="32" viewBox="0 0 32 32"><polyline points="20,8 12,16 20,24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <img src="logo01.png" alt="DroNow Logo" class="logo-video">
+  </div>
+  
+  <!-- Short Black header with PV text -->
+  <header>
+    <h1>PV Inspection – Fast, Reliable Results with Thermal Drones</h1>
+    <p>Detect faults, hot spots, and performance losses — without downtime</p>
+  </header>
+
+  <!-- PV Inspection Section -->
+  <section class="pv-section">
+    <!-- Responsive YouTube embed -->
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:2rem;margin-top:1.5rem;">
+      <iframe
+        src="https://www.youtube.com/embed/rvyOh897qWY?start=42&autoplay=1&mute=1&controls=0&rel=0&playsinline=1"
+        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <h2>PV Inspection with Thermal Drone Technology</h2>
+    <p>
+      Our drone‑based thermal inspections deliver fast, cell‑level analysis across your entire PV array. 
+      Using high‑resolution infrared sensors, we detect hot spots, junction box failures, string outages, soiling, module mismatch, and more—all without interrupting your system’s operation.
+    </p>
+    <ul>
+      <li>
+        <strong>Comprehensive &amp; scalable:</strong> Inspect up to 1 MW in under 10 minutes with autonomous flight—ideal for large-scale solar farms and commercial rooftops.
+      </li>
+      <li>
+        <strong>Early fault detection:</strong> Thermal imaging reveals hidden defects (e.g. micro-cracks, PID, hot spots, diode issues) before they become visible or costly.
+      </li>
+      <li>
+        <strong>Higher safety &amp; lower cost:</strong> No rooftop walking, no system shutdown—data is captured from the air, keeping technicians safe and maximizing uptime.
+      </li>
+      <li>
+        <strong>Standards‑compliant data:</strong> Inspections follow IEC 62446‑3 guidelines for solar thermography, ensuring reliable results for O&M, warranty, and insurance.
+      </li>
+      <li>
+        <strong>AI‑powered analysis:</strong> Visual and thermal data are processed by AI, automatically flagging anomalies and prioritizing maintenance actions.
+      </li>
+    </ul>
+    <p>
+      Every inspection includes:
+    </p>
+    <ul>
+      <li>Radiometric thermal maps for hotspot detection</li>
+      <li>Visual (RGB) imagery for soiling, shading, and physical damage</li>
+      <li>Geo‑tagged anomaly reports with GPS and temperature deltas</li>
+      <li>Interactive dashboards for trend tracking and compliance</li>
+    </ul>
+    <div style="text-align: center;">
+      <a href="index.html#contact" class="btn-primary">Request a PV Inspection</a>
+    </div>
+  </section>
+</body>
+</html>
